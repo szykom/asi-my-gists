@@ -12,3 +12,32 @@
  *= require_tree .
  *= require bootstrap.css
  */
+
+
+h1 {
+	font-size: 18px;
+	text-align: center;
+}
+
+.snippet-block {
+	background: #85BDFF;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 0px;
+}
+
+.desc {
+	margin: 10px 0;
+	font-size: 14px;
+	color: #fff;
+	font-style: italic;
+	}
+
+.lang-info {
+	margin-bottom: -5px;
+	margin-left: -10px;
+	font-size: 18px;
+}
+.lang {
+	border: 1px solid #fff;
+}

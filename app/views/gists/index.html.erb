@@ -27,21 +27,22 @@
 
 <h1>Listing gists</h1>
 
-Snippet
-Lang
-Description
-
     <% @gists.each do |gist| %>
-    <div>
-        <%= gist.snippet %>
-        <%= gist.lang %>
-        <%= gist.description %>
-        
-        <div class="btn-group">
-        <%= link_to 'Show', gist, :class => "btn btn-default" %>
-        <%= link_to 'Edit', edit_gist_path(gist), :class => "btn btn-default" %>
-        <%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default" %>
+    <div class="snippet-block">
+		
+		<div>
+			<p class="desc"><%= gist.description %></p>
         </div>
-</div>
+			<div class="btn-group">
+				<%= link_to 'Show', gist, :class => "btn btn-default" %>
+				<%= link_to 'Edit', edit_gist_path(gist), :class => "btn btn-default" %>
+				<%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default" %>
+			</div>
+			<div class="lang-info">
+					<span class="label label-success lang"><%= gist.lang %></span><br/>
+			</div>
+			
+			<%= raw Pygments.highlight(gist.snippet, lexer: gist.lang) %>
+	</div>
     <% end %>
 <br>
