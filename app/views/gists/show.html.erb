@@ -1,15 +1,14 @@
 <p id="notice"><%= notice %></p>
-<p>
-  <strong>Lang:</strong>
-  <%= @gist.lang %>
-</p>
-<p>
-  <strong>Snippet:</strong>
-</p>
-<%= raw Pygments.highlight(@gist.snippet, lexer: @gist.lang) %>
-<p>
-  <strong>Description:</strong>
-  <%= @gist.description %>
-</p>
-<%= link_to 'Edit', edit_gist_path(@gist) %> |
-<%= link_to 'Back', gists_path %>
+<div class="snippet-block">
+	<div>
+		<p class="desc"><%= @gist.description %></p>
+	</div>
+	<div class="lang-info">
+		<span class="label label-success lang"><%= @gist.lang %></span><br/>
+	</div>
+		<%= raw Pygments.highlight(@gist.snippet, lexer: @gist.lang) %>
+	<div class="btn-group">
+		<%= link_to 'Edit', edit_gist_path(@gist), :class => "btn btn-default" %>
+		<%= link_to 'Back', gists_path, :class => "btn btn-default" %>
+	</div>
+</div>
