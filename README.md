@@ -1,20 +1,19 @@
-asi-my-gists
+Gister
 ============
 
 ## Informacje o aplikacji
 
-Aplikacja pozwalająca zarządzanie katalogiem snippetów
-Na bazie wgenerowaniej aplikacji 'my_gists'
+Aplikacja pozwalająca zarządzanie własnym katalogiem snippetów
 
-Projekt stworzony na zaliczenie laboratorium z Architektury Serwisów Interentowych prowadzonego przez dr Włodzimierza Bzyla
+Projekt stworzony na zaliczenie laboratorium z Architektury Serwisów Internetowych prowadzone przez dr Włodzimierza Bzyla
 
 ## Funkcjonalności
 
-- Zaiplementowanie elementów Bootstrap 3.0
+- Zaiplementowanie elementów Bootstrap 3
 - Routing w aplikacji
 - Poprawiona responsywność strony
-- implementacja infinity scrolling
-- wyszukiwanie elementów z listy
+- Implementacja infinity scrolling
+- Wyszukiwanie elementów z listy
 
 ## Gemy
 
