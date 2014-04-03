@@ -46,6 +46,14 @@ h1 {
 	width: 100%;
 }
 
+.brand-name {
+	font-size: 20px;
+	vertical-alignment: center;
+	padding: 15px 10px;
+	margin: 0;
+	cursor: default;
+}
+
 .snippet-block pre {
  white-space: pre-wrap;       /* css-3 */
  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
