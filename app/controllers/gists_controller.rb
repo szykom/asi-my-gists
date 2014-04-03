@@ -1,10 +1,15 @@
 class GistsController < ApplicationController
   before_action :set_gist, only: [:show, :edit, :update, :destroy]
 
+
+  def search
+     @gists = Gist.search(params[:lang])
+   end
+
   # GET /gists
   # GET /gists.json
   def index
-    @gists = Gist.paginate(:page => params[:page], :per_page => 4 ).order('created_at DESC')
+    @gists = Gist.search(params[:search]).paginate(:page => params[:page], :per_page => 4 ).order('created_at DESC')
     respond_to do |format|
         format.html
         format.js

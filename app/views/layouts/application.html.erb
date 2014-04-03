@@ -20,11 +20,21 @@
       <a class="navbar-brand active" href="#">Gister</a>
     </div>
 
+
+
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="#">List</a></li>
         <li>
 			<%= link_to 'New Gist', new_gist_path %>
+		</li>
+		<li>
+		    <%= form_tag gists_path, :method => 'get', :id => "gists_search", :class=> "navbar-form navbar-left" do %>
+				<div class="form-group">
+					<%= text_field_tag :search, params[:search], :class=> "form-control", :placeholder => "Search" %>
+				</div>
+				<%= submit_tag "Search", :name => nil, :class => "form-control" %>
+			<% end %>
 		</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
